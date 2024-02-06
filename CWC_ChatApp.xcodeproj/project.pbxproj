@@ -14,12 +14,19 @@
 		546F26D02B71C1C400FED9C1 /* CWC_ChatAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546F26CF2B71C1C400FED9C1 /* CWC_ChatAppTests.swift */; };
 		546F26DA2B71C1C400FED9C1 /* CWC_ChatAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546F26D92B71C1C400FED9C1 /* CWC_ChatAppUITests.swift */; };
 		546F26DC2B71C1C400FED9C1 /* CWC_ChatAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546F26DB2B71C1C400FED9C1 /* CWC_ChatAppUITestsLaunchTests.swift */; };
-		546F26F52B71C91300FED9C1 /* LexendDeca-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 546F26F22B71C91300FED9C1 /* LexendDeca-Regular.ttf */; };
-		546F26F62B71C91300FED9C1 /* LexendDeca-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 546F26F32B71C91300FED9C1 /* LexendDeca-Bold.ttf */; };
-		546F26F72B71C91300FED9C1 /* LexendDeca-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 546F26F42B71C91300FED9C1 /* LexendDeca-SemiBold.ttf */; };
 		546F26F92B71C96D00FED9C1 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546F26F82B71C96D00FED9C1 /* Fonts.swift */; };
 		546F26FD2B71CC0900FED9C1 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546F26FC2B71CC0900FED9C1 /* CustomTabBar.swift */; };
 		546F26FF2B71D0C700FED9C1 /* CustomTabBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546F26FE2B71D0C700FED9C1 /* CustomTabBarButton.swift */; };
+		546F27062B71D3B600FED9C1 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 546F27052B71D3B600FED9C1 /* FirebaseAuth */; };
+		546F27082B71D3B600FED9C1 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 546F27072B71D3B600FED9C1 /* FirebaseFirestore */; };
+		546F270A2B71D3B600FED9C1 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 546F27092B71D3B600FED9C1 /* FirebaseFirestoreSwift */; };
+		546F270C2B71D3B600FED9C1 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 546F270B2B71D3B600FED9C1 /* FirebaseStorage */; };
+		546F270E2B71D3FA00FED9C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546F270D2B71D3FA00FED9C1 /* AppDelegate.swift */; };
+		546F27122B71D5CD00FED9C1 /* LexendDeca-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 546F270F2B71D5CD00FED9C1 /* LexendDeca-Bold.ttf */; };
+		546F27132B71D5CD00FED9C1 /* LexendDeca-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 546F27102B71D5CD00FED9C1 /* LexendDeca-Regular.ttf */; };
+		546F27142B71D5CD00FED9C1 /* LexendDeca-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 546F27112B71D5CD00FED9C1 /* LexendDeca-SemiBold.ttf */; };
+		546F27182B71F00300FED9C1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 546F27172B71F00300FED9C1 /* GoogleService-Info.plist */; };
+		546F271A2B71F21900FED9C1 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546F27192B71F21900FED9C1 /* AuthViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,12 +58,15 @@
 		546F26D92B71C1C400FED9C1 /* CWC_ChatAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CWC_ChatAppUITests.swift; sourceTree = "<group>"; };
 		546F26DB2B71C1C400FED9C1 /* CWC_ChatAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CWC_ChatAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		546F26F12B71C79900FED9C1 /* CWC-ChatApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "CWC-ChatApp-Info.plist"; sourceTree = SOURCE_ROOT; };
-		546F26F22B71C91300FED9C1 /* LexendDeca-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "LexendDeca-Regular.ttf"; path = "../../../../../../../Downloads/Lexend_Deca (1)/static/LexendDeca-Regular.ttf"; sourceTree = "<group>"; };
-		546F26F32B71C91300FED9C1 /* LexendDeca-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "LexendDeca-Bold.ttf"; path = "../../../../../../../Downloads/Lexend_Deca (1)/static/LexendDeca-Bold.ttf"; sourceTree = "<group>"; };
-		546F26F42B71C91300FED9C1 /* LexendDeca-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "LexendDeca-SemiBold.ttf"; path = "../../../../../../../Downloads/Lexend_Deca (1)/static/LexendDeca-SemiBold.ttf"; sourceTree = "<group>"; };
 		546F26F82B71C96D00FED9C1 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		546F26FC2B71CC0900FED9C1 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		546F26FE2B71D0C700FED9C1 /* CustomTabBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarButton.swift; sourceTree = "<group>"; };
+		546F270D2B71D3FA00FED9C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		546F270F2B71D5CD00FED9C1 /* LexendDeca-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LexendDeca-Bold.ttf"; sourceTree = "<group>"; };
+		546F27102B71D5CD00FED9C1 /* LexendDeca-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LexendDeca-Regular.ttf"; sourceTree = "<group>"; };
+		546F27112B71D5CD00FED9C1 /* LexendDeca-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LexendDeca-SemiBold.ttf"; sourceTree = "<group>"; };
+		546F27172B71F00300FED9C1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		546F27192B71F21900FED9C1 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +74,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				546F27062B71D3B600FED9C1 /* FirebaseAuth in Frameworks */,
+				546F270C2B71D3B600FED9C1 /* FirebaseStorage in Frameworks */,
+				546F27082B71D3B600FED9C1 /* FirebaseFirestore in Frameworks */,
+				546F270A2B71D3B600FED9C1 /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,7 +121,9 @@
 		546F26BD2B71C1C100FED9C1 /* CWC_ChatApp */ = {
 			isa = PBXGroup;
 			children = (
+				546F27172B71F00300FED9C1 /* GoogleService-Info.plist */,
 				546F26F12B71C79900FED9C1 /* CWC-ChatApp-Info.plist */,
+				546F270D2B71D3FA00FED9C1 /* AppDelegate.swift */,
 				546F26BE2B71C1C100FED9C1 /* CWC_ChatAppApp.swift */,
 				546F26E82B71C1F100FED9C1 /* Views */,
 				546F26E92B71C1F800FED9C1 /* ViewModels */,
@@ -158,6 +174,7 @@
 		546F26E92B71C1F800FED9C1 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				546F27192B71F21900FED9C1 /* AuthViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -172,9 +189,9 @@
 		546F26EB2B71C20600FED9C1 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				546F26F32B71C91300FED9C1 /* LexendDeca-Bold.ttf */,
-				546F26F22B71C91300FED9C1 /* LexendDeca-Regular.ttf */,
-				546F26F42B71C91300FED9C1 /* LexendDeca-SemiBold.ttf */,
+				546F270F2B71D5CD00FED9C1 /* LexendDeca-Bold.ttf */,
+				546F27102B71D5CD00FED9C1 /* LexendDeca-Regular.ttf */,
+				546F27112B71D5CD00FED9C1 /* LexendDeca-SemiBold.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -219,6 +236,12 @@
 			dependencies = (
 			);
 			name = CWC_ChatApp;
+			packageProductDependencies = (
+				546F27052B71D3B600FED9C1 /* FirebaseAuth */,
+				546F27072B71D3B600FED9C1 /* FirebaseFirestore */,
+				546F27092B71D3B600FED9C1 /* FirebaseFirestoreSwift */,
+				546F270B2B71D3B600FED9C1 /* FirebaseStorage */,
+			);
 			productName = CWC_ChatApp;
 			productReference = 546F26BB2B71C1C100FED9C1 /* CWC_ChatApp.app */;
 			productType = "com.apple.product-type.application";
@@ -291,6 +314,9 @@
 				Base,
 			);
 			mainGroup = 546F26B22B71C1C100FED9C1;
+			packageReferences = (
+				546F27042B71D3B600FED9C1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 546F26BC2B71C1C100FED9C1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -307,11 +333,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				546F27132B71D5CD00FED9C1 /* LexendDeca-Regular.ttf in Resources */,
 				546F26C62B71C1C400FED9C1 /* Preview Assets.xcassets in Resources */,
-				546F26F52B71C91300FED9C1 /* LexendDeca-Regular.ttf in Resources */,
-				546F26F72B71C91300FED9C1 /* LexendDeca-SemiBold.ttf in Resources */,
-				546F26F62B71C91300FED9C1 /* LexendDeca-Bold.ttf in Resources */,
+				546F27142B71D5CD00FED9C1 /* LexendDeca-SemiBold.ttf in Resources */,
 				546F26C32B71C1C400FED9C1 /* Assets.xcassets in Resources */,
+				546F27122B71D5CD00FED9C1 /* LexendDeca-Bold.ttf in Resources */,
+				546F27182B71F00300FED9C1 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,8 +363,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				546F270E2B71D3FA00FED9C1 /* AppDelegate.swift in Sources */,
 				546F26FF2B71D0C700FED9C1 /* CustomTabBarButton.swift in Sources */,
 				546F26FD2B71CC0900FED9C1 /* CustomTabBar.swift in Sources */,
+				546F271A2B71F21900FED9C1 /* AuthViewModel.swift in Sources */,
 				546F26C12B71C1C100FED9C1 /* ContentView.swift in Sources */,
 				546F26F92B71C96D00FED9C1 /* Fonts.swift in Sources */,
 				546F26BF2B71C1C100FED9C1 /* CWC_ChatAppApp.swift in Sources */,
@@ -672,6 +701,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		546F27042B71D3B600FED9C1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.20.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		546F27052B71D3B600FED9C1 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 546F27042B71D3B600FED9C1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		546F27072B71D3B600FED9C1 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 546F27042B71D3B600FED9C1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		546F27092B71D3B600FED9C1 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 546F27042B71D3B600FED9C1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		546F270B2B71D3B600FED9C1 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 546F27042B71D3B600FED9C1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 546F26B32B71C1C100FED9C1 /* Project object */;
 }
