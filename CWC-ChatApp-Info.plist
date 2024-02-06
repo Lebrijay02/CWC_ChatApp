@@ -19,5 +19,7 @@
 		<string>LexendDeca-SemiBold.ttf</string>
 		<string>LexendDeca-Bold.ttf</string>
 	</array>
+	<key>NSContactsUsageDescription</key>
+	<string>Sync your contacts to chat with them</string>
 </dict>
 </plist>

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State var selectedTab : Tabs = .contacts
+    @State var isOnboarding = !AuthViewModel.isUserLoggedIn()
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -18,6 +19,11 @@ struct ContentView: View {
                 //.font(.custom("", size: <#T##CGFloat#>))
             Spacer()
             CustomTabBar(selectedTab: $selectedTab)
+        }
+        .fullScreenCover(isPresented: $isOnboarding){
+            //
+        } content:{
+            OnboardingContainerView(isOnboarding: $isOnboarding)
         }
     }
 }

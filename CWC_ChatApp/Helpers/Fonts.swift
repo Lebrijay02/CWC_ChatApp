@@ -10,13 +10,13 @@ import SwiftUI
 
 extension Font{
     
-    public static var body : Font{
+    public static var bodyTxt : Font{
         return Font.custom("LexendDeca-Regular", size: 14)
     }
     public static var button : Font{
         return Font.custom("LexendDeca-SemiBold", size: 14)
     }
-    public static var caption : Font{
+    public static var smallTxt : Font{
         return Font.custom("LexendDeca-Regular", size: 10)
     }
     public static var tabBar : Font{
@@ -25,7 +25,7 @@ extension Font{
     public static var settings : Font{
         return Font.custom("LexendDeca-Regular", size: 16)
     }
-    public static var title : Font{
+    public static var titleTxt : Font{
         return Font.custom("LexendDeca-Bold", size: 23)
     }
     public static var pageTitle : Font{
