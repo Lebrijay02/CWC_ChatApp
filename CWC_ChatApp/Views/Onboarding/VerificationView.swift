@@ -28,7 +28,14 @@ struct VerificationView: View {
             .padding(.top, 34)
             Spacer()
             Button{
-                currentStep = .profile
+                //send verif to fb
+                AuthViewModel.verifyCode(code: verifCode) { error in
+                    if error == nil{
+                        currentStep = .profile
+                    }else{
+                        
+                    }
+                }
             } label: {
                 Text("Next")
             }

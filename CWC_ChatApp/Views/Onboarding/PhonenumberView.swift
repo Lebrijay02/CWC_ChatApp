@@ -39,7 +39,14 @@ struct PhonenumberView: View {
             .padding(.top, 34)
             Spacer()
             Button{
-                currentStep = .verification
+                //send phone ti fb auth
+                AuthViewModel.sendPhoneNumber(phone: phoneNumber) { error in
+                    if error == nil{
+                        currentStep = .verification
+                    }else{
+                        
+                    }
+                }
             } label: {
                 Text("Next")
             }
