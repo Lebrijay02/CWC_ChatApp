@@ -15,6 +15,7 @@ class ContactsViewModel: ObservableObject{
         //perform so it doesnt block ui
         DispatchQueue.init(label: "getcontacts").async {
             do{
+                print("doing")
                 //ask permision
                 let store = CNContactStore()
                 //list of keys to get
@@ -28,6 +29,7 @@ class ContactsViewModel: ObservableObject{
                 }
                 DatabaseService().getPlatformUsers(localContacts: self.localContacts) { platformUser in
                     //set users to be published
+                    print("async")
                     DispatchQueue.main.async {
                         self.users = platformUser
                     }

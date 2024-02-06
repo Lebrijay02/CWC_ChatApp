@@ -32,6 +32,7 @@ struct ContactsView: View {
         .padding(.horizontal)
         .onAppear{
             //get local contacts
+            print("get")
             contactsViewModel.getLocalContacts()
         }
     }

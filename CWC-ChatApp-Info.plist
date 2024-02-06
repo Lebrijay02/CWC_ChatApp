@@ -21,5 +21,7 @@
 	</array>
 	<key>NSContactsUsageDescription</key>
 	<string>Sync your contacts to chat with them</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Allow use of camera?</string>
 </dict>
 </plist>

@@ -8,6 +8,7 @@
 import Foundation
 import Contacts
 import Firebase
+import FirebaseStorage
 
 class DatabaseService{
     func getPlatformUsers(localContacts : [CNContact], completion:  @escaping ([User]) -> Void){
@@ -57,5 +58,46 @@ class DatabaseService{
         //retrieve users in platform
         //return users
         completion(platformUsers)
+    }
+    func setUserProfile(firstName: String, lastName: String, image : UIImage?, completion:  @escaping (Bool) -> Void){
+        //TODO: guard agains logged out users
+        //get reference to firestore
+        let db = Firestore.firestore()
+        //set profile
+        //TODO: after auth
+        let doc = db.collection("users").document()
+        doc.setData(["firstname" : firstName, "lastname": lastName])
+        //check if image is passed
+        if let image = image{
+            //create storage reference
+            let storageRef = Storage.storage().reference()
+            //from image to data
+            let imageData = image.jpegData(compressionQuality: 0.8)
+            //check if it was converted to data
+            guard imageData != nil else{
+                print("Couldnt convert")
+                return
+            }
+            //specify pathname
+            let path = "images/\(UUID().uuidString).jpg"
+            let fileRef = storageRef.child(path)
+            //upload image data
+            let uploadTask = fileRef.putData(imageData!) { meta, error in
+                if error == nil && meta != nil{
+                    //set image to path
+                    doc.setData(["photo" : path], merge: true){error in
+                        if error == nil{
+                            //success
+                            completion(true)
+                        }
+                    }
+                }else{
+                    //upload wasnt successfull
+                    completion(false)
+                }
+            }
+            
+            //set image path to profile
+        }
     }
 }
