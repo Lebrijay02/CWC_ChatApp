@@ -14,6 +14,10 @@
 		546F26D02B71C1C400FED9C1 /* CWC_ChatAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546F26CF2B71C1C400FED9C1 /* CWC_ChatAppTests.swift */; };
 		546F26DA2B71C1C400FED9C1 /* CWC_ChatAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546F26D92B71C1C400FED9C1 /* CWC_ChatAppUITests.swift */; };
 		546F26DC2B71C1C400FED9C1 /* CWC_ChatAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546F26DB2B71C1C400FED9C1 /* CWC_ChatAppUITestsLaunchTests.swift */; };
+		546F26F52B71C91300FED9C1 /* LexendDeca-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 546F26F22B71C91300FED9C1 /* LexendDeca-Regular.ttf */; };
+		546F26F62B71C91300FED9C1 /* LexendDeca-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 546F26F32B71C91300FED9C1 /* LexendDeca-Bold.ttf */; };
+		546F26F72B71C91300FED9C1 /* LexendDeca-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 546F26F42B71C91300FED9C1 /* LexendDeca-SemiBold.ttf */; };
+		546F26F92B71C96D00FED9C1 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546F26F82B71C96D00FED9C1 /* Fonts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,11 @@
 		546F26D52B71C1C400FED9C1 /* CWC_ChatAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CWC_ChatAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		546F26D92B71C1C400FED9C1 /* CWC_ChatAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CWC_ChatAppUITests.swift; sourceTree = "<group>"; };
 		546F26DB2B71C1C400FED9C1 /* CWC_ChatAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CWC_ChatAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		546F26F12B71C79900FED9C1 /* CWC-ChatApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "CWC-ChatApp-Info.plist"; sourceTree = SOURCE_ROOT; };
+		546F26F22B71C91300FED9C1 /* LexendDeca-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "LexendDeca-Regular.ttf"; path = "../../../../../../../Downloads/Lexend_Deca (1)/static/LexendDeca-Regular.ttf"; sourceTree = "<group>"; };
+		546F26F32B71C91300FED9C1 /* LexendDeca-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "LexendDeca-Bold.ttf"; path = "../../../../../../../Downloads/Lexend_Deca (1)/static/LexendDeca-Bold.ttf"; sourceTree = "<group>"; };
+		546F26F42B71C91300FED9C1 /* LexendDeca-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "LexendDeca-SemiBold.ttf"; path = "../../../../../../../Downloads/Lexend_Deca (1)/static/LexendDeca-SemiBold.ttf"; sourceTree = "<group>"; };
+		546F26F82B71C96D00FED9C1 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +103,14 @@
 		546F26BD2B71C1C100FED9C1 /* CWC_ChatApp */ = {
 			isa = PBXGroup;
 			children = (
+				546F26F12B71C79900FED9C1 /* CWC-ChatApp-Info.plist */,
 				546F26BE2B71C1C100FED9C1 /* CWC_ChatAppApp.swift */,
-				546F26C02B71C1C100FED9C1 /* ContentView.swift */,
+				546F26E82B71C1F100FED9C1 /* Views */,
+				546F26E92B71C1F800FED9C1 /* ViewModels */,
+				546F26EA2B71C1FF00FED9C1 /* Models */,
+				546F26ED2B71C21200FED9C1 /* Helpers */,
+				546F26EC2B71C20D00FED9C1 /* Services */,
+				546F26EB2B71C20600FED9C1 /* Fonts */,
 				546F26C22B71C1C400FED9C1 /* Assets.xcassets */,
 				546F26C42B71C1C400FED9C1 /* Preview Content */,
 			);
@@ -125,6 +140,53 @@
 				546F26DB2B71C1C400FED9C1 /* CWC_ChatAppUITestsLaunchTests.swift */,
 			);
 			path = CWC_ChatAppUITests;
+			sourceTree = "<group>";
+		};
+		546F26E82B71C1F100FED9C1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				546F26C02B71C1C100FED9C1 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		546F26E92B71C1F800FED9C1 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		546F26EA2B71C1FF00FED9C1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		546F26EB2B71C20600FED9C1 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				546F26F32B71C91300FED9C1 /* LexendDeca-Bold.ttf */,
+				546F26F22B71C91300FED9C1 /* LexendDeca-Regular.ttf */,
+				546F26F42B71C91300FED9C1 /* LexendDeca-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		546F26EC2B71C20D00FED9C1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		546F26ED2B71C21200FED9C1 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				546F26F82B71C96D00FED9C1 /* Fonts.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +294,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				546F26C62B71C1C400FED9C1 /* Preview Assets.xcassets in Resources */,
+				546F26F52B71C91300FED9C1 /* LexendDeca-Regular.ttf in Resources */,
+				546F26F72B71C91300FED9C1 /* LexendDeca-SemiBold.ttf in Resources */,
+				546F26F62B71C91300FED9C1 /* LexendDeca-Bold.ttf in Resources */,
 				546F26C32B71C1C400FED9C1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,6 +323,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				546F26C12B71C1C100FED9C1 /* ContentView.swift in Sources */,
+				546F26F92B71C96D00FED9C1 /* Fonts.swift in Sources */,
 				546F26BF2B71C1C100FED9C1 /* CWC_ChatAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,6 +491,7 @@
 				DEVELOPMENT_TEAM = KFFF9Z9V8N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "CWC-ChatApp-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -454,6 +521,7 @@
 				DEVELOPMENT_TEAM = KFFF9Z9V8N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "CWC-ChatApp-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
