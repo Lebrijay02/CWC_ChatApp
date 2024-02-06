@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var selectedTab : Tabs = .contacts
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -15,8 +16,9 @@ struct ContentView: View {
                 .foregroundStyle(.tint)
             Text("Hello, world!")
                 //.font(.custom("", size: <#T##CGFloat#>))
+            Spacer()
+            CustomTabBar(selectedTab: $selectedTab)
         }
-        .padding()
     }
 }
 
