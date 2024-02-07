@@ -44,12 +44,20 @@ struct ContactsListView: View {
                 
             }
             .frame(height: 46)
+            .onChange(of: filterText) {
+                //filter results
+                contactsViewModel.filterContacts(filterBy: filterText.lowercased().trimmingCharacters(in: .whitespacesAndNewlines))
+            }
             //list
-            if contactsViewModel.users.count > 0 {
-                List (contactsViewModel.users){user in
-                    //
+            if contactsViewModel.filteredUsers.count > 0 {
+                List (contactsViewModel.filteredUsers){user in
+                    //display rows
+                    ContactRow(user: user)
+                        .listRowBackground(Color.clear)
+                        .listRowSeparator(.hidden)
                 }
                 .listStyle(.plain)
+                .padding(.top, 12)
             }else{
                 Spacer()
                 Image("noContacts")
@@ -63,6 +71,11 @@ struct ContactsListView: View {
             }
         }
         .padding(.horizontal)
+        .onAppear{
+            //get local contacts
+            print("get")
+            contactsViewModel.getLocalContacts()
+        }
     }
 }
 

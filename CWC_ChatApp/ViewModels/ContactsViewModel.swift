@@ -9,8 +9,11 @@ import Foundation
 import Contacts
 
 class ContactsViewModel: ObservableObject{
-    @Published var users = [User]()
+    private var users = [User]()
+    private var filteredText = ""
+    @Published var filteredUsers = [User]()
     private var localContacts = [CNContact]()
+    
     func getLocalContacts(){
         //perform so it doesnt block ui
         DispatchQueue.init(label: "getcontacts").async {
@@ -32,12 +35,25 @@ class ContactsViewModel: ObservableObject{
                     print("async")
                     DispatchQueue.main.async {
                         self.users = platformUser
+                        //set filter
+                        self.filterContacts(filterBy: self.filteredText)
                     }
                 }
-
             }catch{
+                //
             }
         }
+    }
+    func filterContacts(filterBy: String){
+        self.filteredText = filterBy
+        if filteredText.isEmpty{
+            self.filteredUsers = users
+            return
+        }
+        self.filteredUsers = users.filter({ user in
+            //criteria
+            user.firstname?.lowercased().contains(filteredText) ?? false || user.lastname?.lowercased().contains(filteredText) ?? false || user.phone?.contains(filteredText) ?? false
+        })
     }
 }
 /*

@@ -84,14 +84,20 @@ class DatabaseService{
             let path = "images/\(UUID().uuidString).jpg"
             let fileRef = storageRef.child(path)
             //upload image data
-            //let uploadTask = fileRef.putData(imageData!) { meta, error in
             fileRef.putData(imageData!) { meta, error in
                 if error == nil && meta != nil{
-                    //set image to path
-                    doc.setData(["photo" : path], merge: true){error in
-                        if error == nil{
-                            //success
-                            completion(true)
+                    //get full url
+                    fileRef.downloadURL { url, error in
+                        if url != nil && error == nil{
+                            //set image to path
+                            doc.setData(["photo" : url!.absoluteString], merge: true){error in
+                                if error == nil{
+                                    //success
+                                    completion(true)
+                                }
+                            }
+                        }else{
+                            completion(false)
                         }
                     }
                 }else{
@@ -101,7 +107,11 @@ class DatabaseService{
             }
             
             //set image path to profile
+        }else{
+            //no image set
+            completion(true)
         }
+        
     }
     
     func checkUserProfile(completion:  @escaping (Bool) -> Void){

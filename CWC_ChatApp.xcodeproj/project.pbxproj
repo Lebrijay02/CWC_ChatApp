@@ -10,6 +10,7 @@
 		5452F7012B729F62007611D9 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5452F7002B729F62007611D9 /* ImagePicker.swift */; };
 		5452F7052B72F2C2007611D9 /* ContactsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5452F7042B72F2C2007611D9 /* ContactsListView.swift */; };
 		5452F7072B72F2D1007611D9 /* ChatsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5452F7062B72F2D1007611D9 /* ChatsListView.swift */; };
+		5452F7092B7302FB007611D9 /* ContactRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5452F7082B7302FB007611D9 /* ContactRow.swift */; };
 		546F26BF2B71C1C100FED9C1 /* CWC_ChatAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546F26BE2B71C1C100FED9C1 /* CWC_ChatAppApp.swift */; };
 		546F26C12B71C1C100FED9C1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546F26C02B71C1C100FED9C1 /* ContentView.swift */; };
 		546F26C32B71C1C400FED9C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 546F26C22B71C1C400FED9C1 /* Assets.xcassets */; };
@@ -65,6 +66,7 @@
 		5452F7002B729F62007611D9 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		5452F7042B72F2C2007611D9 /* ContactsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsListView.swift; sourceTree = "<group>"; };
 		5452F7062B72F2D1007611D9 /* ChatsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsListView.swift; sourceTree = "<group>"; };
+		5452F7082B7302FB007611D9 /* ContactRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactRow.swift; sourceTree = "<group>"; };
 		546F26BB2B71C1C100FED9C1 /* CWC_ChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CWC_ChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		546F26BE2B71C1C100FED9C1 /* CWC_ChatAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CWC_ChatAppApp.swift; sourceTree = "<group>"; };
 		546F26C02B71C1C100FED9C1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				5452F7042B72F2C2007611D9 /* ContactsListView.swift */,
+				5452F7082B7302FB007611D9 /* ContactRow.swift */,
 			);
 			path = ContactsView;
 			sourceTree = "<group>";
@@ -448,6 +451,7 @@
 				546F26C12B71C1C100FED9C1 /* ContentView.swift in Sources */,
 				546F26F92B71C96D00FED9C1 /* Fonts.swift in Sources */,
 				546F27232B71F50F00FED9C1 /* VerificationView.swift in Sources */,
+				5452F7092B7302FB007611D9 /* ContactRow.swift in Sources */,
 				546F27272B71F52B00FED9C1 /* ContactsView.swift in Sources */,
 				5452F7052B72F2C2007611D9 /* ContactsListView.swift in Sources */,
 				546F272F2B7202B700FED9C1 /* ContactsViewModel.swift in Sources */,
