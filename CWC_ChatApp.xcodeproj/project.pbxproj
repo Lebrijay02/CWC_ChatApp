@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5452F7012B729F62007611D9 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5452F7002B729F62007611D9 /* ImagePicker.swift */; };
+		5452F7052B72F2C2007611D9 /* ContactsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5452F7042B72F2C2007611D9 /* ContactsListView.swift */; };
+		5452F7072B72F2D1007611D9 /* ChatsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5452F7062B72F2D1007611D9 /* ChatsListView.swift */; };
 		546F26BF2B71C1C100FED9C1 /* CWC_ChatAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546F26BE2B71C1C100FED9C1 /* CWC_ChatAppApp.swift */; };
 		546F26C12B71C1C100FED9C1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546F26C02B71C1C100FED9C1 /* ContentView.swift */; };
 		546F26C32B71C1C400FED9C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 546F26C22B71C1C400FED9C1 /* Assets.xcassets */; };
@@ -61,6 +63,8 @@
 
 /* Begin PBXFileReference section */
 		5452F7002B729F62007611D9 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		5452F7042B72F2C2007611D9 /* ContactsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsListView.swift; sourceTree = "<group>"; };
+		5452F7062B72F2D1007611D9 /* ChatsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsListView.swift; sourceTree = "<group>"; };
 		546F26BB2B71C1C100FED9C1 /* CWC_ChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CWC_ChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		546F26BE2B71C1C100FED9C1 /* CWC_ChatAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CWC_ChatAppApp.swift; sourceTree = "<group>"; };
 		546F26C02B71C1C100FED9C1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -124,6 +128,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5452F7022B72F292007611D9 /* ContactsView */ = {
+			isa = PBXGroup;
+			children = (
+				5452F7042B72F2C2007611D9 /* ContactsListView.swift */,
+			);
+			path = ContactsView;
+			sourceTree = "<group>";
+		};
+		5452F7032B72F29B007611D9 /* ChatsView */ = {
+			isa = PBXGroup;
+			children = (
+				5452F7062B72F2D1007611D9 /* ChatsListView.swift */,
+			);
+			path = ChatsView;
+			sourceTree = "<group>";
+		};
 		546F26B22B71C1C100FED9C1 = {
 			isa = PBXGroup;
 			children = (
@@ -191,9 +211,11 @@
 		546F26E82B71C1F100FED9C1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				546F26C02B71C1C100FED9C1 /* ContentView.swift */,
+				5452F7032B72F29B007611D9 /* ChatsView */,
+				5452F7022B72F292007611D9 /* ContactsView */,
 				546F271F2B71F4E800FED9C1 /* Onboarding */,
 				546F26FB2B71CBEF00FED9C1 /* CustomTabBar */,
-				546F26C02B71C1C100FED9C1 /* ContentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -418,6 +440,7 @@
 				546F26FF2B71D0C700FED9C1 /* CustomTabBarButton.swift in Sources */,
 				546F26FD2B71CC0900FED9C1 /* CustomTabBar.swift in Sources */,
 				546F27252B71F51E00FED9C1 /* CreateProfileView.swift in Sources */,
+				5452F7072B72F2D1007611D9 /* ChatsListView.swift in Sources */,
 				546F271E2B71F4DE00FED9C1 /* WelcomeView.swift in Sources */,
 				546F27312B72942800FED9C1 /* User.swift in Sources */,
 				546F272B2B71FF7400FED9C1 /* CreateProfileTxtFieldStyle.swift in Sources */,
@@ -426,6 +449,7 @@
 				546F26F92B71C96D00FED9C1 /* Fonts.swift in Sources */,
 				546F27232B71F50F00FED9C1 /* VerificationView.swift in Sources */,
 				546F27272B71F52B00FED9C1 /* ContactsView.swift in Sources */,
+				5452F7052B72F2C2007611D9 /* ContactsListView.swift in Sources */,
 				546F272F2B7202B700FED9C1 /* ContactsViewModel.swift in Sources */,
 				5452F7012B729F62007611D9 /* ImagePicker.swift in Sources */,
 				546F27212B71F50000FED9C1 /* PhonenumberView.swift in Sources */,

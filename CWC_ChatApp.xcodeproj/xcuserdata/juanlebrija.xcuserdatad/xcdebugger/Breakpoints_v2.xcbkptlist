@@ -46,8 +46,8 @@
             filePath = "CWC_ChatApp/Services/DatabaseService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "16"
-            endingLineNumber = "16"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
             landmarkName = "getPlatformUsers(localContacts:completion:)"
             landmarkType = "7">
             <Locations>
@@ -94,8 +94,8 @@
             filePath = "CWC_ChatApp/Services/DatabaseService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
             landmarkName = "getPlatformUsers(localContacts:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -188,8 +188,8 @@
             filePath = "CWC_ChatApp/Services/DatabaseService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
             landmarkName = "getPlatformUsers(localContacts:completion:)"
             landmarkType = "7">
             <Locations>
@@ -221,6 +221,21 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "40"
                   endingLineNumber = "40"
+                  offsetFromSymbolStart = "260">
+               </Location>
+               <Location
+                  uuid = "0EDB589B-2C5D-4850-BF48-2BF64ED4814C - 854f09957d75f014"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in CWC_ChatApp.DatabaseService.getPlatformUsers(localContacts: Swift.Array&lt;__C.CNContact&gt;, completion: (Swift.Array&lt;CWC_ChatApp.User&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "CWC_ChatApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juanlebrija/Desktop/Pl/Swift/CWC/CWC_ChatApp/CWC_ChatApp/Services/DatabaseService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
                   offsetFromSymbolStart = "260">
                </Location>
             </Locations>

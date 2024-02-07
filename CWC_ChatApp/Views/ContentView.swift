@@ -11,14 +11,19 @@ struct ContentView: View {
     @State var selectedTab : Tabs = .contacts
     @State var isOnboarding = !AuthViewModel.isUserLoggedIn()
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-                //.font(.custom("", size: <#T##CGFloat#>))
-            Spacer()
-            CustomTabBar(selectedTab: $selectedTab)
+        ZStack{
+            Color(.bg)
+                .ignoresSafeArea()
+            VStack {
+                switch selectedTab {
+                case .chats:
+                    ChatsListView()
+                case .contacts:
+                    ContactsListView()
+                }
+                Spacer()
+                CustomTabBar(selectedTab: $selectedTab)
+            }
         }
         .fullScreenCover(isPresented: $isOnboarding){
             //

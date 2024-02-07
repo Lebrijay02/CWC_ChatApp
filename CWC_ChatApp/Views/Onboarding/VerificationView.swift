@@ -6,9 +6,11 @@
 //
 
 import SwiftUI
+import Combine
 
 struct VerificationView: View {
     @Binding var currentStep : OnboardingStep
+    @Binding var isOnboarding : Bool
     @State var verifCode = ""
     var body: some View {
         VStack{
@@ -22,16 +24,46 @@ struct VerificationView: View {
                 Rectangle()
                     .frame(height: 56)
                     .foregroundStyle(.inputField)
-                TextField("", text: $verifCode)
-                    .font(.bodyTxt)
+                HStack{
+                    TextField("", text: $verifCode)
+                        .font(.bodyTxt)
+                        .keyboardType(.numberPad)
+                        .foregroundStyle(.txtInput)
+                        .onReceive(Just(verifCode)) { _ in
+                            TextHelper.limitText(&verifCode, 6)
+                        }
+                        .placeholder(when: verifCode.isEmpty) {
+                            Text("* * * * * *")
+                                .foregroundColor(.txtInput)
+                                .font(.bodyTxt)
+                        }
+                    Spacer()
+                    Button(action: {
+                        verifCode = ""
+                    }, label: {
+                        Image(systemName: "multiply.circle.fill")
+                            .frame(width: 19, height: 19)
+                            .tint(.iconInput)
+                    })
+                }
+                .padding()
             }
+            //.padding()
             .padding(.top, 34)
             Spacer()
             Button{
                 //send verif to fb
                 AuthViewModel.verifyCode(code: verifCode) { error in
                     if error == nil{
-                        currentStep = .profile
+                        //check if urser exists
+                        DatabaseService().checkUserProfile { exists in
+                            if exists{
+                                isOnboarding = false
+                            }else{
+                                //move to profile creation
+                                currentStep = .profile
+                            }
+                        }
                     }else{
                         
                     }
@@ -47,5 +79,5 @@ struct VerificationView: View {
 }
 
 #Preview {
-    VerificationView(currentStep: .constant(.verification))
+    VerificationView(currentStep: .constant(.verification), isOnboarding: .constant(true))
 }

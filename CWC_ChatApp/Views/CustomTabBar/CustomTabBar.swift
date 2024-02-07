@@ -24,7 +24,8 @@ struct CustomTabBar: View {
             .tint(.iconSecondary)
             
             Button {
-                //
+                AuthViewModel.logout()
+                print("Logout")
             } label: {
                 VStack{
                     Image(systemName: "plus.circle.fill")

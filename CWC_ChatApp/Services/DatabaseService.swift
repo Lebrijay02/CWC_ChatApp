@@ -9,6 +9,8 @@ import Foundation
 import Contacts
 import Firebase
 import FirebaseStorage
+import FirebaseFirestore
+import FirebaseCore
 
 class DatabaseService{
     func getPlatformUsers(localContacts : [CNContact], completion:  @escaping ([User]) -> Void){
@@ -52,21 +54,21 @@ class DatabaseService{
                 }
             }
         }
-        
-        
-        
-        //retrieve users in platform
-        //return users
         completion(platformUsers)
     }
+    
     func setUserProfile(firstName: String, lastName: String, image : UIImage?, completion:  @escaping (Bool) -> Void){
-        //TODO: guard agains logged out users
+        //Ensure user is logged in
+        guard AuthViewModel.isUserLoggedIn() != false else{
+            print("user not logged in")
+            return
+        }
         //get reference to firestore
         let db = Firestore.firestore()
         //set profile
         //TODO: after auth
-        let doc = db.collection("users").document()
-        doc.setData(["firstname" : firstName, "lastname": lastName])
+        let doc = db.collection("users").document(AuthViewModel.getLoggedInUserId())
+        doc.setData(["firstname" : firstName, "lastname": lastName, "phone": TextHelper.clean(phone: AuthViewModel.getLoggedInUserPhone())])
         //check if image is passed
         if let image = image{
             //create storage reference
@@ -82,7 +84,8 @@ class DatabaseService{
             let path = "images/\(UUID().uuidString).jpg"
             let fileRef = storageRef.child(path)
             //upload image data
-            let uploadTask = fileRef.putData(imageData!) { meta, error in
+            //let uploadTask = fileRef.putData(imageData!) { meta, error in
+            fileRef.putData(imageData!) { meta, error in
                 if error == nil && meta != nil{
                     //set image to path
                     doc.setData(["photo" : path], merge: true){error in
@@ -99,5 +102,35 @@ class DatabaseService{
             
             //set image path to profile
         }
+    }
+    
+    func checkUserProfile(completion:  @escaping (Bool) -> Void){
+        //check if logged in
+        guard AuthViewModel.isUserLoggedIn() != false else{
+            return
+        }
+        let db = Firestore.firestore()
+        db.collection("users").document(AuthViewModel.getLoggedInUserId()).getDocument { (snapshot, error) in
+            if let error = error {
+                print("Error fetching document: \(error)")
+            } else if let snapshot = snapshot {
+                if snapshot.exists {
+                    completion(true)
+                } else {
+                    completion(false)
+                }
+            }
+        }
+        /*
+         db.collection("users").document(AuthViewModel.getLoggedInUserId()).getDocument{ snapshot, error in
+             //TODO: keep user profile data
+             if snapshot != nil && error == nil{
+                 completion(snapshot!.exists)
+
+             }else{
+                 completion(snapshot.false)
+             }
+         }
+         */
     }
 }

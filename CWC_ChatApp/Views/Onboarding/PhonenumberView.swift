@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 
 struct PhonenumberView: View {
     @Binding var currentStep : OnboardingStep
@@ -23,8 +24,18 @@ struct PhonenumberView: View {
                     .frame(height: 56)
                     .foregroundStyle(.inputField)
                 HStack{
-                    TextField("e.g +52 81 1482 3428", text: $phoneNumber)
+                    TextField("", text: $phoneNumber)
                         .font(.bodyTxt)
+                        .foregroundStyle(.txtInput)
+                        .keyboardType(.decimalPad)
+                        .onReceive(Just(phoneNumber)) { _ in
+                            TextHelper.applyPatternOnNumbers(&phoneNumber, pattern: "+## ## #### ####", replacementCharacter: "#")
+                        }
+                        .placeholder(when: phoneNumber.isEmpty) {
+                            Text("e.g +52 81 1482 3428")
+                                .foregroundColor(.txtInput)
+                                .font(.bodyTxt)
+                        }
                     Spacer()
                     Button(action: {
                         phoneNumber = ""
