@@ -13,37 +13,45 @@ class ContactsViewModel: ObservableObject{
     private var filteredText = ""
     @Published var filteredUsers = [User]()
     private var localContacts = [CNContact]()
+    /*
+     init(){
+         print("getting contacts...")
+         getLocalContacts()
+     }
+     */
     
     func getLocalContacts(){
         //perform so it doesnt block ui
         DispatchQueue.init(label: "getcontacts").async {
-            do{
-                print("doing")
-                //ask permision
-                let store = CNContactStore()
-                //list of keys to get
-                let keys = [CNContactPhoneNumbersKey, CNContactGivenNameKey, CNContactFamilyNameKey] as! [CNKeyDescriptor]
-                //create fetch request
-                let fetchRequest = CNContactFetchRequest(keysToFetch: keys)
-                //get contacts frome phone
-                try store.enumerateContacts(with: fetchRequest) { contact, success in
-                    //do something with contact
-                    self.localContacts.append(contact)
-                }
-                DatabaseService().getPlatformUsers(localContacts: self.localContacts) { platformUser in
-                    //set users to be published
-                    print("async")
-                    DispatchQueue.main.async {
-                        self.users = platformUser
-                        //set filter
-                        self.filterContacts(filterBy: self.filteredText)
+            if self.users.count <= 0{
+                do{
+                    print("doing")
+                    //ask permision
+                    let store = CNContactStore()
+                    //list of keys to get
+                    let keys = [CNContactPhoneNumbersKey, CNContactGivenNameKey, CNContactFamilyNameKey] as! [CNKeyDescriptor]
+                    //create fetch request
+                    let fetchRequest = CNContactFetchRequest(keysToFetch: keys)
+                    //get contacts frome phone
+                    try store.enumerateContacts(with: fetchRequest) { contact, success in
+                        //do something with contact
+                        self.localContacts.append(contact)
                     }
+                    DatabaseService().getPlatformUsers(localContacts: self.localContacts) { platformUser in
+                        //set users to be published
+                        DispatchQueue.main.async {
+                            self.users = platformUser
+                            //set filter
+                            self.filterContacts(filterBy: self.filteredText)
+                        }
+                    }
+                }catch{
+                    //
                 }
-            }catch{
-                //
             }
         }
     }
+    
     func filterContacts(filterBy: String){
         self.filteredText = filterBy
         if filteredText.isEmpty{
@@ -54,6 +62,18 @@ class ContactsViewModel: ObservableObject{
             //criteria
             user.firstname?.lowercased().contains(filteredText) ?? false || user.lastname?.lowercased().contains(filteredText) ?? false || user.phone?.contains(filteredText) ?? false
         })
+    }
+    
+    func getParticipants(ids: [String]) -> [User]{
+        //filter out the users list for only the participants based on ids passed in
+        let foundUsers = users.filter{ user in
+            if user.id == nil{
+                return false
+            }else{
+                return ids.contains(user.id!)
+            }
+        }
+        return foundUsers
     }
 }
 /*

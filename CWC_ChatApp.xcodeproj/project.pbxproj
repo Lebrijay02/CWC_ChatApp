@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		54072C572B88ECB1000C2013 /* ChatListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54072C562B88ECB1000C2013 /* ChatListRow.swift */; };
+		540F11DE2B8CEECE0051731E /* CacheService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540F11DD2B8CEECE0051731E /* CacheService.swift */; };
+		5410AE0D2B82F08B000B7250 /* RoundCornerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5410AE0C2B82F08B000B7250 /* RoundCornerExt.swift */; };
+		5410AE0F2B83100E000B7250 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5410AE0E2B83100E000B7250 /* Chat.swift */; };
+		5410AE112B8311B3000B7250 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5410AE102B8311B3000B7250 /* ChatViewModel.swift */; };
+		5437AAA12B7E6D92009C90EE /* ConversationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5437AAA02B7E6D92009C90EE /* ConversationView.swift */; };
+		5437AAA42B7E716C009C90EE /* ProfilePicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5437AAA32B7E716C009C90EE /* ProfilePicView.swift */; };
 		5452F7012B729F62007611D9 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5452F7002B729F62007611D9 /* ImagePicker.swift */; };
 		5452F7052B72F2C2007611D9 /* ContactsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5452F7042B72F2C2007611D9 /* ContactsListView.swift */; };
 		5452F7072B72F2D1007611D9 /* ChatsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5452F7062B72F2D1007611D9 /* ChatsListView.swift */; };
@@ -43,6 +50,7 @@
 		546F27312B72942800FED9C1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546F27302B72942800FED9C1 /* User.swift */; };
 		546F27332B7294E800FED9C1 /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546F27322B7294E800FED9C1 /* DatabaseService.swift */; };
 		546F27352B7296BD00FED9C1 /* TextHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546F27342B7296BD00FED9C1 /* TextHelper.swift */; };
+		54710E842B84FB2A0004D6AC /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54710E832B84FB2A0004D6AC /* DateHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +71,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		54072C562B88ECB1000C2013 /* ChatListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListRow.swift; sourceTree = "<group>"; };
+		540F11DD2B8CEECE0051731E /* CacheService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheService.swift; sourceTree = "<group>"; };
+		5410AE0C2B82F08B000B7250 /* RoundCornerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundCornerExt.swift; sourceTree = "<group>"; };
+		5410AE0E2B83100E000B7250 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		5410AE102B8311B3000B7250 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		5437AAA02B7E6D92009C90EE /* ConversationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationView.swift; sourceTree = "<group>"; };
+		5437AAA32B7E716C009C90EE /* ProfilePicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePicView.swift; sourceTree = "<group>"; };
 		5452F7002B729F62007611D9 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		5452F7042B72F2C2007611D9 /* ContactsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsListView.swift; sourceTree = "<group>"; };
 		5452F7062B72F2D1007611D9 /* ChatsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsListView.swift; sourceTree = "<group>"; };
@@ -99,6 +114,7 @@
 		546F27302B72942800FED9C1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		546F27322B7294E800FED9C1 /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
 		546F27342B7296BD00FED9C1 /* TextHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextHelper.swift; sourceTree = "<group>"; };
+		54710E832B84FB2A0004D6AC /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +146,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5437AAA22B7E7134009C90EE /* Prefabs */ = {
+			isa = PBXGroup;
+			children = (
+				5437AAA32B7E716C009C90EE /* ProfilePicView.swift */,
+			);
+			path = Prefabs;
+			sourceTree = "<group>";
+		};
 		5452F7022B72F292007611D9 /* ContactsView */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +167,8 @@
 			isa = PBXGroup;
 			children = (
 				5452F7062B72F2D1007611D9 /* ChatsListView.swift */,
+				5437AAA02B7E6D92009C90EE /* ConversationView.swift */,
+				54072C562B88ECB1000C2013 /* ChatListRow.swift */,
 			);
 			path = ChatsView;
 			sourceTree = "<group>";
@@ -170,6 +196,7 @@
 		546F26BD2B71C1C100FED9C1 /* CWC_ChatApp */ = {
 			isa = PBXGroup;
 			children = (
+				5437AAA22B7E7134009C90EE /* Prefabs */,
 				546F27172B71F00300FED9C1 /* GoogleService-Info.plist */,
 				546F26F12B71C79900FED9C1 /* CWC-ChatApp-Info.plist */,
 				546F270D2B71D3FA00FED9C1 /* AppDelegate.swift */,
@@ -228,6 +255,7 @@
 			children = (
 				546F27192B71F21900FED9C1 /* AuthViewModel.swift */,
 				546F272E2B7202B700FED9C1 /* ContactsViewModel.swift */,
+				5410AE102B8311B3000B7250 /* ChatViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -236,6 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				546F27302B72942800FED9C1 /* User.swift */,
+				5410AE0E2B83100E000B7250 /* Chat.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -254,6 +283,7 @@
 			isa = PBXGroup;
 			children = (
 				546F27322B7294E800FED9C1 /* DatabaseService.swift */,
+				540F11DD2B8CEECE0051731E /* CacheService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -266,6 +296,8 @@
 				546F272A2B71FF7400FED9C1 /* CreateProfileTxtFieldStyle.swift */,
 				546F27342B7296BD00FED9C1 /* TextHelper.swift */,
 				5452F7002B729F62007611D9 /* ImagePicker.swift */,
+				5410AE0C2B82F08B000B7250 /* RoundCornerExt.swift */,
+				54710E832B84FB2A0004D6AC /* DateHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -438,6 +470,7 @@
 				546F27332B7294E800FED9C1 /* DatabaseService.swift in Sources */,
 				546F27292B71F82D00FED9C1 /* OnBoardingButtonStyle.swift in Sources */,
 				546F270E2B71D3FA00FED9C1 /* AppDelegate.swift in Sources */,
+				54710E842B84FB2A0004D6AC /* DateHelper.swift in Sources */,
 				546F271C2B71F3E300FED9C1 /* OnboardingContainerView.swift in Sources */,
 				546F27352B7296BD00FED9C1 /* TextHelper.swift in Sources */,
 				546F26FF2B71D0C700FED9C1 /* CustomTabBarButton.swift in Sources */,
@@ -446,6 +479,8 @@
 				5452F7072B72F2D1007611D9 /* ChatsListView.swift in Sources */,
 				546F271E2B71F4DE00FED9C1 /* WelcomeView.swift in Sources */,
 				546F27312B72942800FED9C1 /* User.swift in Sources */,
+				540F11DE2B8CEECE0051731E /* CacheService.swift in Sources */,
+				54072C572B88ECB1000C2013 /* ChatListRow.swift in Sources */,
 				546F272B2B71FF7400FED9C1 /* CreateProfileTxtFieldStyle.swift in Sources */,
 				546F271A2B71F21900FED9C1 /* AuthViewModel.swift in Sources */,
 				546F26C12B71C1C100FED9C1 /* ContentView.swift in Sources */,
@@ -454,10 +489,15 @@
 				5452F7092B7302FB007611D9 /* ContactRow.swift in Sources */,
 				546F27272B71F52B00FED9C1 /* ContactsView.swift in Sources */,
 				5452F7052B72F2C2007611D9 /* ContactsListView.swift in Sources */,
+				5410AE0D2B82F08B000B7250 /* RoundCornerExt.swift in Sources */,
 				546F272F2B7202B700FED9C1 /* ContactsViewModel.swift in Sources */,
 				5452F7012B729F62007611D9 /* ImagePicker.swift in Sources */,
+				5410AE112B8311B3000B7250 /* ChatViewModel.swift in Sources */,
+				5410AE0F2B83100E000B7250 /* Chat.swift in Sources */,
 				546F27212B71F50000FED9C1 /* PhonenumberView.swift in Sources */,
 				546F26BF2B71C1C100FED9C1 /* CWC_ChatAppApp.swift in Sources */,
+				5437AAA42B7E716C009C90EE /* ProfilePicView.swift in Sources */,
+				5437AAA12B7E6D92009C90EE /* ConversationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

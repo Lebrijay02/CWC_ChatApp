@@ -15,6 +15,7 @@ struct CWC_ChatAppApp: App {
         WindowGroup {
             ContentView()
                 .environmentObject(ContactsViewModel())
+                .environmentObject(ChatViewModel())
         }
     }
 }

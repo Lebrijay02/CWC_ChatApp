@@ -8,8 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    //detects when app state changes
+    @Environment(\.scenePhase) var scenePhase
+    @EnvironmentObject var chatViewModel : ChatViewModel
+    @EnvironmentObject var contactsViewModel : ContactsViewModel
     @State var selectedTab : Tabs = .contacts
     @State var isOnboarding = !AuthViewModel.isUserLoggedIn()
+    @State var isChatShowing = false
     var body: some View {
         ZStack{
             Color(.bg)
@@ -17,12 +22,18 @@ struct ContentView: View {
             VStack {
                 switch selectedTab {
                 case .chats:
-                    ChatsListView()
+                    ChatsListView(isChatShowing: $isChatShowing)
                 case .contacts:
-                    ContactsListView()
+                    ContactsListView(isChatShowing: $isChatShowing)
                 }
                 Spacer()
                 CustomTabBar(selectedTab: $selectedTab)
+            }
+        }
+        .onAppear{
+            if !isOnboarding{
+                //user already onboarded
+                contactsViewModel.getLocalContacts()
             }
         }
         .fullScreenCover(isPresented: $isOnboarding){
@@ -30,6 +41,22 @@ struct ContentView: View {
         } content:{
             OnboardingContainerView(isOnboarding: $isOnboarding)
         }
+        .fullScreenCover(isPresented: $isChatShowing) {
+            //
+        } content:{
+            ConversationView(isChatShowing: $isChatShowing)
+        }
+        .onChange(of: scenePhase) { oldValue, newPhase in
+            if newPhase == .active{
+                print("active")
+            }else if newPhase == .inactive{
+                print("inactive")
+            }else if newPhase == .background{
+                print("background")
+                chatViewModel.closeChatListView()
+            }
+        }
+
     }
 }
 

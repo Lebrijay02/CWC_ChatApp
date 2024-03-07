@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContactsView: View {
     @Binding var isOnboarding : Bool
+    @EnvironmentObject var contactsViewModel : ContactsViewModel
     var body: some View {
         VStack{
             Spacer()
@@ -29,6 +30,11 @@ struct ContactsView: View {
             .padding(.bottom, 87)
         }
         .padding(.horizontal)
+        .onAppear{
+            //get local contacts
+            print("getting contacts ")
+            contactsViewModel.getLocalContacts()
+        }
     }
 }
 

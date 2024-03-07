@@ -7,38 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "67649F6B-58BF-4E59-BDF9-380ABE0D9658"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CWC_ChatApp/ViewModels/ContactsViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "getLocalContacts()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "4D7D0E0E-13EA-42F9-957A-5AC461FA86CF"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CWC_ChatApp/ViewModels/ContactsViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "getLocalContacts()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "5126F756-6665-4A87-993B-DDF212614695"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -46,8 +14,8 @@
             filePath = "CWC_ChatApp/Services/DatabaseService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
             landmarkName = "getPlatformUsers(localContacts:completion:)"
             landmarkType = "7">
             <Locations>
@@ -94,88 +62,10 @@
             filePath = "CWC_ChatApp/Services/DatabaseService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
             landmarkName = "getPlatformUsers(localContacts:completion:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "61A8E749-99F2-41FC-8DF4-A812E34B7F66"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CWC_ChatApp/ViewModels/ContactsViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
-            landmarkName = "getLocalContacts()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "61A8E749-99F2-41FC-8DF4-A812E34B7F66 - 1aafebbd389baee"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable () -&gt; () in CWC_ChatApp.ContactsViewModel.getLocalContacts() -&gt; ()"
-                  moduleName = "CWC_ChatApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/juanlebrija/Desktop/Pl/Swift/CWC/CWC_ChatApp/CWC_ChatApp/ViewModels/ContactsViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
-                  offsetFromSymbolStart = "748">
-               </Location>
-               <Location
-                  uuid = "61A8E749-99F2-41FC-8DF4-A812E34B7F66 - 93b31f5519afbe52"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (Swift.Array&lt;CWC_ChatApp.User&gt;) -&gt; () in closure #1 @Sendable () -&gt; () in CWC_ChatApp.ContactsViewModel.getLocalContacts() -&gt; ()"
-                  moduleName = "CWC_ChatApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/juanlebrija/Desktop/Pl/Swift/CWC/CWC_ChatApp/CWC_ChatApp/ViewModels/ContactsViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
-                  offsetFromSymbolStart = "172">
-               </Location>
-               <Location
-                  uuid = "61A8E749-99F2-41FC-8DF4-A812E34B7F66 - 1aafebbd389bac9"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable () -&gt; () in CWC_ChatApp.ContactsViewModel.getLocalContacts() -&gt; ()"
-                  moduleName = "CWC_ChatApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/juanlebrija/Desktop/Pl/Swift/CWC/CWC_ChatApp/CWC_ChatApp/ViewModels/ContactsViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "30"
-                  endingLineNumber = "30"
-                  offsetFromSymbolStart = "932">
-               </Location>
-               <Location
-                  uuid = "61A8E749-99F2-41FC-8DF4-A812E34B7F66 - 93b31f5519afbe75"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (Swift.Array&lt;CWC_ChatApp.User&gt;) -&gt; () in closure #1 @Sendable () -&gt; () in CWC_ChatApp.ContactsViewModel.getLocalContacts() -&gt; ()"
-                  moduleName = "CWC_ChatApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/juanlebrija/Desktop/Pl/Swift/CWC/CWC_ChatApp/CWC_ChatApp/ViewModels/ContactsViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "30"
-                  endingLineNumber = "30"
-                  offsetFromSymbolStart = "188">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -188,8 +78,8 @@
             filePath = "CWC_ChatApp/Services/DatabaseService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
             landmarkName = "getPlatformUsers(localContacts:completion:)"
             landmarkType = "7">
             <Locations>
@@ -239,85 +129,6 @@
                   offsetFromSymbolStart = "260">
                </Location>
             </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "165DB224-55F2-4985-84E9-50F34FE3CB98"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CWC_ChatApp/ViewModels/ContactsViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "getLocalContacts()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "165DB224-55F2-4985-84E9-50F34FE3CB98 - 93b31f5519afbdd6"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (Swift.Array&lt;CWC_ChatApp.User&gt;) -&gt; () in closure #1 @Sendable () -&gt; () in CWC_ChatApp.ContactsViewModel.getLocalContacts() -&gt; ()"
-                  moduleName = "CWC_ChatApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/juanlebrija/Desktop/Pl/Swift/CWC/CWC_ChatApp/CWC_ChatApp/ViewModels/ContactsViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "33"
-                  endingLineNumber = "33"
-                  offsetFromSymbolStart = "368">
-               </Location>
-               <Location
-                  uuid = "165DB224-55F2-4985-84E9-50F34FE3CB98 - 84711c4b299d0017"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #2 (Swift.Array&lt;CWC_ChatApp.User&gt;) -&gt; () in closure #1 @Sendable () -&gt; () in CWC_ChatApp.ContactsViewModel.getLocalContacts() -&gt; ()"
-                  moduleName = "CWC_ChatApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/juanlebrija/Desktop/Pl/Swift/CWC/CWC_ChatApp/CWC_ChatApp/ViewModels/ContactsViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "33"
-                  endingLineNumber = "33"
-                  offsetFromSymbolStart = "56">
-               </Location>
-               <Location
-                  uuid = "165DB224-55F2-4985-84E9-50F34FE3CB98 - 93b31f5519afbdd6"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (Swift.Array&lt;CWC_ChatApp.User&gt;) -&gt; () in closure #1 @Sendable () -&gt; () in CWC_ChatApp.ContactsViewModel.getLocalContacts() -&gt; ()"
-                  moduleName = "CWC_ChatApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/juanlebrija/Desktop/Pl/Swift/CWC/CWC_ChatApp/CWC_ChatApp/ViewModels/ContactsViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "33"
-                  endingLineNumber = "33"
-                  offsetFromSymbolStart = "408">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "26E292EE-D275-4493-B741-82BFB31C8C41"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CWC_ChatApp/ViewModels/ContactsViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
-            landmarkName = "getLocalContacts()"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

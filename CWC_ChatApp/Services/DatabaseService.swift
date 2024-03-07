@@ -13,6 +13,10 @@ import FirebaseFirestore
 import FirebaseCore
 
 class DatabaseService{
+    
+    var chatListViewListeners = [ListenerRegistration]()
+    var conversationViewListeners = [ListenerRegistration]()
+    
     func getPlatformUsers(localContacts : [CNContact], completion:  @escaping ([User]) -> Void){
         //storing fetched users
         var platformUsers = [User]()
@@ -143,4 +147,115 @@ class DatabaseService{
          }
          */
     }
+    
+    //MARK: Chat Methods
+    func getAllChats(completion:  @escaping ([Chat]) -> Void){
+        //reference db
+        let db = Firestore.firestore()
+        //query to chats where user is participant
+        let chatsQuerry = db.collection("chats").whereField("participantids", arrayContains: AuthViewModel.getLoggedInUserId())
+        
+        let listener = chatsQuerry.addSnapshotListener { snapshot, error in
+            if snapshot != nil && error == nil{
+                var chats = [Chat]()
+                print("created chat array")
+                //print(snapshot)
+                //loop
+                for doc in snapshot!.documents{
+                    print("looping...")
+                    //parse data into chat struct
+                    let chat = try? doc.data(as: Chat.self)
+                    //dd chat into array
+                    if let chat = chat{
+                        chats.append(chat)
+                        print("appended!")
+                    }
+                }
+                //return data
+                completion(chats)
+            }else{
+                print("error in db retrieval")
+            }
+        }
+        
+        //keep track of listener to close
+        chatListViewListeners.append(listener)
+    }
+    
+    func getAllMessages(chat: Chat, completion:  @escaping ([ChatMessasge]) -> Void){
+        //check id not nil
+        guard chat.id != nil else{
+            completion([ChatMessasge]())
+            return
+        }
+        //db reference
+        let db = Firestore.firestore()
+        //querry
+        let msgsQuerry = db.collection("chats")
+            .document(chat.id!).collection("msgs")
+            .order(by: "timestamp")
+        //perform querry
+        let listener = msgsQuerry.addSnapshotListener{ snapshot, error in
+            if snapshot != nil && error == nil{
+                //loop and create instances
+                var messages = [ChatMessasge]()
+                //loop
+                for doc in snapshot!.documents{
+                    //parse data into chat struct
+                    let msg = try? doc.data(as: ChatMessasge.self)
+                    //dd chat into array
+                    if let msg = msg{
+                        messages.append(msg)
+                    }
+                }
+                //return data
+                completion(messages)
+            }else{
+                print("error in db retrieval")
+            }
+        }
+        
+        //keep track of listener to close
+        conversationViewListeners.append(listener)
+    }
+    
+    func sendMessage(msg : String, chat : Chat){
+        //check if valid chat
+        guard chat.id != nil else{
+            return
+        }
+        //reference database
+        let db = Firestore.firestore()
+        print("connecting")
+        //add message
+        db.collection("chats").document(chat.id!).collection("msgs").addDocument(data: ["imgurl" : "", "msg" : msg, "senderid" : AuthViewModel.getLoggedInUserId(), "timestamp" : Date()])
+        //update doc
+        db.collection("chats").document(chat.id!).setData(["updated" : Date(), "lastmsg": msg], merge: true)
+
+        
+    }
+    
+    func createChat(chat : Chat, completion: @escaping (String)-> Void){
+        //reference database
+        let db = Firestore.firestore()
+        //create document
+        let doc = db.collection("chats").document()
+        //set data for document
+        try? doc.setData(from: chat, completion: { error in
+            //comunicade doc id
+            completion(doc.documentID)
+        })
+    }
+    
+    func detatchChatListViewListeners(){
+        for l in chatListViewListeners{
+            l.remove()
+        }
+    }
+    func detatchConversationViewListeners(){
+        for l in conversationViewListeners{
+            l.remove()
+        }
+    }
 }
+//addSnapshotListener fethces data constantly

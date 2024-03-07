@@ -9,7 +9,9 @@ import SwiftUI
 
 struct ContactsListView: View {
     @EnvironmentObject var contactsViewModel : ContactsViewModel
+    @EnvironmentObject var chatViewModel : ChatViewModel
     @State var filterText = ""
+    @Binding var isChatShowing : Bool
     var body: some View {
         VStack{
             //heading
@@ -51,10 +53,18 @@ struct ContactsListView: View {
             //list
             if contactsViewModel.filteredUsers.count > 0 {
                 List (contactsViewModel.filteredUsers){user in
-                    //display rows
-                    ContactRow(user: user)
-                        .listRowBackground(Color.clear)
-                        .listRowSeparator(.hidden)
+                    Button {
+                        //search existing convo with user
+                        chatViewModel.getChatFor(contact: user)
+                        
+                        isChatShowing = true
+                    } label: {
+                        //display rows
+                        ContactRow(user: user)
+                    }
+                    .buttonStyle(.plain)
+                    .listRowBackground(Color.clear)
+                    .listRowSeparator(.hidden)
                 }
                 .listStyle(.plain)
                 .padding(.top, 12)
@@ -71,14 +81,13 @@ struct ContactsListView: View {
             }
         }
         .padding(.horizontal)
+        /*
         .onAppear{
             //get local contacts
             print("get")
-            contactsViewModel.getLocalContacts()
+            contactsViewModel.getLocalContacts() 
         }
+         */
     }
 }
 
-#Preview {
-    ContactsListView()
-}
