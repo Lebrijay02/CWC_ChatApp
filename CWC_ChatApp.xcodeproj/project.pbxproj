@@ -51,6 +51,8 @@
 		546F27332B7294E800FED9C1 /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546F27322B7294E800FED9C1 /* DatabaseService.swift */; };
 		546F27352B7296BD00FED9C1 /* TextHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546F27342B7296BD00FED9C1 /* TextHelper.swift */; };
 		54710E842B84FB2A0004D6AC /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54710E832B84FB2A0004D6AC /* DateHelper.swift */; };
+		54C1C8DF2B9977BF00C7E273 /* ConversationTxtMssg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C1C8DE2B9977BF00C7E273 /* ConversationTxtMssg.swift */; };
+		54C1C8E12B99796C00C7E273 /* ConversationPhotoMssg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C1C8E02B99796C00C7E273 /* ConversationPhotoMssg.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +117,8 @@
 		546F27322B7294E800FED9C1 /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
 		546F27342B7296BD00FED9C1 /* TextHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextHelper.swift; sourceTree = "<group>"; };
 		54710E832B84FB2A0004D6AC /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
+		54C1C8DE2B9977BF00C7E273 /* ConversationTxtMssg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationTxtMssg.swift; sourceTree = "<group>"; };
+		54C1C8E02B99796C00C7E273 /* ConversationPhotoMssg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationPhotoMssg.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +173,8 @@
 				5452F7062B72F2D1007611D9 /* ChatsListView.swift */,
 				5437AAA02B7E6D92009C90EE /* ConversationView.swift */,
 				54072C562B88ECB1000C2013 /* ChatListRow.swift */,
+				54C1C8DE2B9977BF00C7E273 /* ConversationTxtMssg.swift */,
+				54C1C8E02B99796C00C7E273 /* ConversationPhotoMssg.swift */,
 			);
 			path = ChatsView;
 			sourceTree = "<group>";
@@ -476,6 +482,7 @@
 				546F26FF2B71D0C700FED9C1 /* CustomTabBarButton.swift in Sources */,
 				546F26FD2B71CC0900FED9C1 /* CustomTabBar.swift in Sources */,
 				546F27252B71F51E00FED9C1 /* CreateProfileView.swift in Sources */,
+				54C1C8DF2B9977BF00C7E273 /* ConversationTxtMssg.swift in Sources */,
 				5452F7072B72F2D1007611D9 /* ChatsListView.swift in Sources */,
 				546F271E2B71F4DE00FED9C1 /* WelcomeView.swift in Sources */,
 				546F27312B72942800FED9C1 /* User.swift in Sources */,
@@ -491,6 +498,7 @@
 				5452F7052B72F2C2007611D9 /* ContactsListView.swift in Sources */,
 				5410AE0D2B82F08B000B7250 /* RoundCornerExt.swift in Sources */,
 				546F272F2B7202B700FED9C1 /* ContactsViewModel.swift in Sources */,
+				54C1C8E12B99796C00C7E273 /* ConversationPhotoMssg.swift in Sources */,
 				5452F7012B729F62007611D9 /* ImagePicker.swift in Sources */,
 				5410AE112B8311B3000B7250 /* ChatViewModel.swift in Sources */,
 				5410AE0F2B83100E000B7250 /* Chat.swift in Sources */,

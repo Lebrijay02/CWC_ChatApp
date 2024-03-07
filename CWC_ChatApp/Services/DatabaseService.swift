@@ -234,6 +234,40 @@ class DatabaseService{
 
         
     }
+    func sendPhotoMessage(img: UIImage, chat: Chat){
+        //check if valid chat
+        guard chat.id != nil else{
+            return
+        }
+        //create storage reference
+        let storageRef = Storage.storage().reference()
+        //from image to data
+        let imageData = img.jpegData(compressionQuality: 0.8)
+        //check if it was converted to data
+        guard imageData != nil else{
+            print("Couldnt convert")
+            return
+        }
+        //specify pathname
+        let path = "images/\(UUID().uuidString).jpg"
+        let fileRef = storageRef.child(path)
+        //upload image
+        fileRef.putData(imageData!, metadata: nil) { metadata, error in
+            if error == nil && metadata != nil{
+                fileRef.downloadURL { url, error in
+                    if error == nil && url != nil{
+                        //reference database
+                        let db = Firestore.firestore()
+                        print("connecting")
+                        //add image
+                        db.collection("chats").document(chat.id!).collection("msgs").addDocument(data: ["imgurl" : url!.absoluteString, "msg" : "", "senderid" : AuthViewModel.getLoggedInUserId(), "timestamp" : Date()])
+                        //update doc
+                        db.collection("chats").document(chat.id!).setData(["updated" : Date(), "lastmsg": "image"], merge: true)
+                    }
+                }
+            }
+        }
+    }
     
     func createChat(chat : Chat, completion: @escaping (String)-> Void){
         //reference database
