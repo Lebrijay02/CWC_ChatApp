@@ -27,7 +27,7 @@ struct ContentView: View {
                     ContactsListView(isChatShowing: $isChatShowing)
                 }
                 Spacer()
-                CustomTabBar(selectedTab: $selectedTab)
+                CustomTabBar(selectedTab: $selectedTab, isChatShowing: $isChatShowing)
             }
         }
         .onAppear{

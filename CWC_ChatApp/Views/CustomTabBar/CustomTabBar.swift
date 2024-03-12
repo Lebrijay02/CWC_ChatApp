@@ -14,6 +14,7 @@ enum Tabs : Int{
 
 struct CustomTabBar: View {
     @Binding var selectedTab : Tabs
+    @Binding var isChatShowing : Bool
     var body: some View {
         HStack{
             Button {
@@ -24,8 +25,8 @@ struct CustomTabBar: View {
             .tint(.iconSecondary)
             
             Button {
-                AuthViewModel.logout()
-                print("Logout")
+                //show conv
+                isChatShowing = true
             } label: {
                 VStack{
                     Image(systemName: "plus.circle.fill")
@@ -50,5 +51,5 @@ struct CustomTabBar: View {
 }
 
 #Preview {
-    CustomTabBar(selectedTab: .constant(.chats))
+    CustomTabBar(selectedTab: .constant(.chats), isChatShowing: .constant(false))
 }
